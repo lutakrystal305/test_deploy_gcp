@@ -1,0 +1,16 @@
+{
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "extends": ["airbnb-base", "plugin:prettier/recommended", "plugin:security:recommended"],
+  "plugins": ["security", "prettier"],
+  "parserOptions": {"ecmaVersion": 2018},
+  "rules": {
+    "no-console": "error",
+    "no-underscore-dangle": "off",
+    "prettier/prettier": "error",
+    "import/prefer-default-export": "off"
+  }
+}
