@@ -3,7 +3,7 @@ name: Deploy by docker pipeline
 on:
   push:
     branches:
-      - dev
+      - master
 
 jobs:
   deploy:
@@ -18,7 +18,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             # Pull image mà được push lên DockerHub bên trên
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/gcp_deploy:${{ github.sha }}
+            docker pull ${{ secrets.DOCKER_USERNAME }}/gcp_deploy:${{ github.sha }}
 
             # Dừng và gỡ bỏ container hiện tại (nếu có)
             docker stop gcp-deploy-container

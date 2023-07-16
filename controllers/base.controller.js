@@ -15,4 +15,8 @@ const getAll = async (req, res) => {
   }
 };
 
+const getDetail = async (req, res) => {
+  res.status(200).send('HELLOOOOOO');
+};
+
 module.exports = { getAll };
