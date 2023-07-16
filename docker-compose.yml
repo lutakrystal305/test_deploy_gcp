@@ -1,0 +1,8 @@
+version: '3.5'
+
+services:
+  app:
+    image: lutakrystal305/deploy_gcp:lts
+    ports:
+      - '3004:3004'
+    restart: unless-stopped
