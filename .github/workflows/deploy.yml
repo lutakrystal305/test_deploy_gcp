@@ -43,5 +43,8 @@ jobs:
             # Pull the image that was pushed to DockerHub
             docker pull ${{ secrets.DOCKER_USERNAME }}/gcp_deploy:lts
 
+            docker stop gcp-deploy-container
+            docker rm gcp-deploy-container
+
             # Run a new container with the pulled image
             docker run --name gcp-deploy-container ${{ secrets.DOCKER_USERNAME }}/gcp_deploy:lts
