@@ -47,4 +47,4 @@ jobs:
             docker rm gcp-deploy-container
 
             # Run a new container with the pulled image
-            docker run --name gcp-deploy-container ${{ secrets.DOCKER_USERNAME }}/gcp_deploy:lts
+            docker run -d --name gcp-deploy-container ${{ secrets.DOCKER_USERNAME }}/gcp_deploy:lts
