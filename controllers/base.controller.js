@@ -19,4 +19,4 @@ const getDetail = async (req, res) => {
   res.status(200).send('HELLOOOOOO');
 };
 
-module.exports = { getAll };
+module.exports = { getAll, getDetail };
